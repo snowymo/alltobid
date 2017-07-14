@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QWebEngineView>
-
+#include <QWebEngineSettings>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -28,6 +28,8 @@ MainWindow::~MainWindow()
 void MainWindow::testEngine(QWidget *parent)
 {
     QWebEngineView* view = new QWebEngineView(parent);
+    QWebEngineSettings *settings = QWebEngineSettings::globalSettings();
+    settings->setAttribute (QWebEngineSettings::PluginsEnabled, true);
     view->load(QUrl("http://51hupai.org/moni/"));
 //    view->show();
 //    ui->centralWidget->widget.setView(view);

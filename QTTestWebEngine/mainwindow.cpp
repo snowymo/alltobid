@@ -1,14 +1,31 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QWebEngineView>
-#include <QWebEngineSettings>
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    testEngine(parent);
+    //testEngine(parent);
+
+    bar = new AddressBar;
+    ui->addressLayout-> addWidget(bar);// (bar, 0, 0, 1, 10);
+
+    view = new PageView(parent);
+    ui->pageLayout->addWidget(view->view);
+
+    //straWidgets = new StrategyWidget;
+    //uistra = new Ui::StrategyWidget;
+    //for(int i = 0; i < 4; i++){
+        //straWidgets[i] = *(new StrategyWidget;
+    //uistra->setupUi(this);
+        //ui->strategyLayout->addWidget(uistra);
+    //}
+
+
+    QObject::connect(bar, SIGNAL(go(QUrl)), view, SLOT(loadNewPage(QUrl)));
 
     // set fixed size
     //ui->centralWidget->setFixedSize(1024,720);
@@ -34,6 +51,6 @@ void MainWindow::testEngine(QWidget *parent)
 //    view->show();
 //    ui->centralWidget->widget.setView(view);
 //    ui->centralWidget->add ->addWidget(view);
-    ui->hLayout->addWidget(view);
+    //ui->hLayout->addWidget(view);
 
 }

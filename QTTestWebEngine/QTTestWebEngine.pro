@@ -25,13 +25,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    addressbar.cpp \
+    pageview.cpp \
+    strategywidget.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    addressbar.h \
+    pageview.h \
+    strategywidget.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    strategywidget.ui
 
 
 QT += webengine

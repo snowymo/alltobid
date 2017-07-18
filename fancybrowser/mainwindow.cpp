@@ -43,6 +43,9 @@
 #include <QtWebKitWidgets>
 #include "mainwindow.h"
 
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
 //! [1]
 
 MainWindow::MainWindow(const QUrl& url)
@@ -107,6 +110,13 @@ MainWindow::MainWindow(const QUrl& url)
 
     setCentralWidget(view);
     setUnifiedTitleAndToolBarOnMac(true);
+
+    // read an image
+    cv::Mat image = cv::imread("C://Zhenyi//Projects//Capture2.PNG");
+    // create image window named "My Image"
+    cv::namedWindow("My Image");
+    // show the image on window
+    cv::imshow("My Image", image);
 }
 //! [3]
 

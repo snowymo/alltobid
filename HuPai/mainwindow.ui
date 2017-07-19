@@ -6,51 +6,854 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>869</width>
-    <height>728</height>
+    <width>1411</width>
+    <height>807</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2000</width>
+    <height>16777215</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="maximumSize">
+    <size>
+     <width>2000</width>
+     <height>800</height>
+    </size>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:0, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <widget class="QWidget" name="horizontalWidget" native="true">
     <property name="geometry">
      <rect>
       <x>-1</x>
       <y>-1</y>
-      <width>861</width>
-      <height>671</height>
+      <width>1421</width>
+      <height>751</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <layout class="QVBoxLayout" name="addressBar"/>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="pageView"/>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <layout class="QVBoxLayout" name="strategyPanel"/>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_8"/>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_7"/>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_5"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <property name="maximumSize">
+     <size>
+      <width>2000</width>
+      <height>800</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>919</x>
+       <y>-1</y>
+       <width>491</width>
+       <height>751</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="strategyPanel" native="true">
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>-1</x>
+           <y>-1</y>
+           <width>501</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QTextBrowser" name="strategy">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;&quot;&gt;策略&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt;&quot;&gt;(xx:xx:xx时 +y元 提前z秒或w元出价)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="stragety1widget" native="true">
+            <widget class="QSpinBox" name="strategy1_hour">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>11</number>
+             </property>
+             <property name="value">
+              <number>11</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="strategy1_min">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>30</number>
+             </property>
+             <property name="value">
+              <number>29</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety1_sec">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>59</number>
+             </property>
+             <property name="value">
+              <number>30</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety1_add">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>0</y>
+               <width>51</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>5000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety1_presec">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>0</y>
+               <width>41</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>59</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety1_preprice">
+             <property name="geometry">
+              <rect>
+               <x>310</x>
+               <y>0</y>
+               <width>51</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>5000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="textBrowser">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>501</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +                 元 提前            秒或             元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="strategy1_value">
+             <property name="geometry">
+              <rect>
+               <x>450</x>
+               <y>0</y>
+               <width>51</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+            </widget>
+            <zorder>textBrowser</zorder>
+            <zorder>strategy1_hour</zorder>
+            <zorder>strategy1_min</zorder>
+            <zorder>stragety1_sec</zorder>
+            <zorder>stragety1_add</zorder>
+            <zorder>stragety1_presec</zorder>
+            <zorder>stragety1_preprice</zorder>
+            <zorder>strategy1_value</zorder>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="stragety2widget" native="true">
+            <widget class="QSpinBox" name="strategy2_hour">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>11</number>
+             </property>
+             <property name="value">
+              <number>11</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety2_min">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>30</number>
+             </property>
+             <property name="value">
+              <number>29</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety2_sec">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>59</number>
+             </property>
+             <property name="value">
+              <number>30</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety2_add">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>0</y>
+               <width>51</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>5000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety2_presec">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>0</y>
+               <width>41</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>59</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety2_preprice">
+             <property name="geometry">
+              <rect>
+               <x>310</x>
+               <y>0</y>
+               <width>51</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>5000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="textBrowser_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>501</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +                 元 提前            秒或             元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="strategy2_value">
+             <property name="geometry">
+              <rect>
+               <x>450</x>
+               <y>0</y>
+               <width>51</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+            </widget>
+            <zorder>textBrowser_2</zorder>
+            <zorder>strategy2_hour</zorder>
+            <zorder>stragety2_min</zorder>
+            <zorder>stragety2_sec</zorder>
+            <zorder>stragety2_add</zorder>
+            <zorder>stragety2_presec</zorder>
+            <zorder>stragety2_preprice</zorder>
+            <zorder>strategy2_value</zorder>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="stragety3widget" native="true">
+            <widget class="QSpinBox" name="strategy3_hour">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>11</number>
+             </property>
+             <property name="value">
+              <number>11</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety3_min">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>30</number>
+             </property>
+             <property name="value">
+              <number>29</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety3_sec">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>0</y>
+               <width>31</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>59</number>
+             </property>
+             <property name="value">
+              <number>30</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety3_add">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>0</y>
+               <width>51</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>5000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety3_presec">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>0</y>
+               <width>41</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>59</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="stragety3_preprice">
+             <property name="geometry">
+              <rect>
+               <x>310</x>
+               <y>0</y>
+               <width>51</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>5000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="textBrowser_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>501</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +                 元 提前            秒或             元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="strategy3_value">
+             <property name="geometry">
+              <rect>
+               <x>450</x>
+               <y>0</y>
+               <width>51</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+            </widget>
+            <zorder>textBrowser_3</zorder>
+            <zorder>strategy3_hour</zorder>
+            <zorder>stragety3_min</zorder>
+            <zorder>stragety3_sec</zorder>
+            <zorder>stragety3_add</zorder>
+            <zorder>stragety3_presec</zorder>
+            <zorder>stragety3_preprice</zorder>
+            <zorder>strategy3_value</zorder>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <zorder>verticalLayoutWidget_2</zorder>
+        <zorder>pricePanel</zorder>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="pricePanel" native="true">
+        <widget class="QTextBrowser" name="textBrowser_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>485</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;&quot;&gt;当前成交价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="currentPrice">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>485</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="timePanel" native="true">
+        <widget class="QTextBrowser" name="textBrowser_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>485</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-weight:600;&quot;&gt;当前时间&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="currentTime">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>485</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="mousePanel" native="true">
+        <widget class="QTextBrowser" name="textBrowser_6">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>485</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;标定鼠标&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>1</y>
+       <width>911</width>
+       <height>751</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="addressBar">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="pageView">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+       </layout>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -58,7 +861,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>869</width>
+     <width>1411</width>
      <height>21</height>
     </rect>
    </property>

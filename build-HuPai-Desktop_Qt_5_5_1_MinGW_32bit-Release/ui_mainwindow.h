@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -66,11 +67,14 @@ public:
     QWidget *pricePanel;
     QTextBrowser *textBrowser_4;
     QTextBrowser *currentPrice;
+    QGraphicsView *gvPrice;
     QWidget *timePanel;
     QTextBrowser *textBrowser_5;
     QTextBrowser *currentTime;
+    QGraphicsView *gvTime;
     QWidget *mousePanel;
     QTextBrowser *textBrowser_6;
+    QGraphicsView *gvMouse;
     QWidget *widget;
     QVBoxLayout *verticalLayout_3;
     QVBoxLayout *addressBar;
@@ -348,6 +352,10 @@ public:
         currentPrice->setSizePolicy(sizePolicy2);
         currentPrice->setMaximumSize(QSize(16777215, 35));
         currentPrice->setFrameShape(QFrame::NoFrame);
+        gvPrice = new QGraphicsView(pricePanel);
+        gvPrice->setObjectName(QStringLiteral("gvPrice"));
+        gvPrice->setGeometry(QRect(10, 100, 461, 60));
+        gvPrice->setSceneRect(QRectF(0, 0, 70, 20));
 
         verticalLayout->addWidget(pricePanel);
 
@@ -369,6 +377,9 @@ public:
         currentTime->setGeometry(QRect(0, 40, 485, 35));
         currentTime->setFont(font1);
         currentTime->setFrameShape(QFrame::NoFrame);
+        gvTime = new QGraphicsView(timePanel);
+        gvTime->setObjectName(QStringLiteral("gvTime"));
+        gvTime->setGeometry(QRect(10, 100, 461, 61));
 
         verticalLayout->addWidget(timePanel);
 
@@ -381,6 +392,9 @@ public:
         font2.setPointSize(14);
         textBrowser_6->setFont(font2);
         textBrowser_6->setFrameShape(QFrame::NoFrame);
+        gvMouse = new QGraphicsView(mousePanel);
+        gvMouse->setObjectName(QStringLiteral("gvMouse"));
+        gvMouse->setGeometry(QRect(20, 81, 451, 91));
 
         verticalLayout->addWidget(mousePanel);
 

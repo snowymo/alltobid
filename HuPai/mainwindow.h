@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include <QtWidgets>
+#include<QImage>
 
 #include "addressbar.h"
 
@@ -23,6 +24,14 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+//    void setImage(QImage img);
+    bool eventFilter(QObject *obj, QEvent *event);
+
+private:
+    void grabApplication();
+
+public slots:
+    void updatePrice();
 
 private:
     Ui::MainWindow *ui;
@@ -30,6 +39,14 @@ private:
     QWebView *view;
 
     AddressBar * addressBar;
+
+    QTimer *timer;
+
+    QImage qImgDesktop;
+    QGraphicsScene *scTime, *scPrice, *scMouse;
+    QPoint pricePos[2];
+    QPoint timePos[2];
+    QPoint enterPos;
 };
 
 #endif // MAINWINDOW_H

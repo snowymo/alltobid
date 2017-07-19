@@ -30,11 +30,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    addressbar.cpp
+    addressbar.cpp \
+    pricerecognition.cpp
 
 HEADERS += \
         mainwindow.h \
-    addressbar.h
+    addressbar.h \
+    pricerecognition.h
 
 FORMS += \
         mainwindow.ui

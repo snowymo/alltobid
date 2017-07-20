@@ -8,6 +8,8 @@
 
 #include "addressbar.h"
 
+#include "digitrecognition.h"
+
 class QWebView;
 QT_BEGIN_NAMESPACE
 class QLineEdit;
@@ -53,6 +55,8 @@ private:
     QPoint pricePos[2];
     QPoint timePos[2];
     QPoint enterPos;
+
+    DigitRecognition* pRecog;
 };
 
 #endif // MAINWINDOW_H

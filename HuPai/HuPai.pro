@@ -31,12 +31,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     addressbar.cpp \
-    pricerecognition.cpp
+    pricerecognition.cpp \
+    digitrecognition.cpp
 
 HEADERS += \
         mainwindow.h \
     addressbar.h \
-    pricerecognition.h
+    pricerecognition.h \
+    digitrecognition.h
 
 FORMS += \
         mainwindow.ui

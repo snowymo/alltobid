@@ -66,6 +66,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->sbTimeMouseY, SIGNAL(valueChanged(int)),this, SLOT(updateTimeMouseY(int)));
     connect(ui->sbEnterMouseX, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseX(int)));
     connect(ui->sbEnterMouseY, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseY(int)));
+
+    pRecog = new DigitRecognition;
 }
 
 MainWindow::~MainWindow()
@@ -91,30 +93,34 @@ MainWindow::~MainWindow()
 void MainWindow::grabApplication()
 {
     QWidget *widget = QApplication::activeWindow();
-       if(widget) {
-            //           static int count = 0;
-            QPixmap p1 = widget->grab(QRect(pricePos[0]+QPoint(-0,40),pricePos[0] + pricePos[1] + +QPoint(-0,40)));
-            //           p.save(QString("screenshot%1.png").arg(count));
-            scPrice = new QGraphicsScene;
-            scPrice->addPixmap(p1);
-            ui->gvPrice->setScene(scPrice);
-            ui->gvPrice->show();
+   if(widget) {
+        //           static int count = 0;
+        QPixmap p1 = widget->grab(QRect(pricePos[0]+QPoint(-0,40),pricePos[0] + pricePos[1] + +QPoint(-0,40)));
+        //           p.save(QString("screenshot%1.png").arg(count));
+        scPrice = new QGraphicsScene;
+        scPrice->addPixmap(p1);
+        ui->gvPrice->setScene(scPrice);
+        ui->gvPrice->show();
+        //
+        pRecog->setSource(p1.toImage());
+        pRecog->detectDigit();
+        ui->currentPrice->setText(QString::number(pRecog->getResult()));
 
-            QPixmap p2 = widget->grab(QRect(timePos[0]+QPoint(0,40),timePos[0] + timePos[1]+QPoint(0,40)));
-            //           p.save(QString("screenshot%1.png").arg(count));
-            scTime = new QGraphicsScene;
-            scTime->addPixmap(p2);
-            ui->gvTime->setScene(scTime);
-            ui->gvTime->show();
+        QPixmap p2 = widget->grab(QRect(timePos[0]+QPoint(0,40),timePos[0] + timePos[1]+QPoint(0,40)));
+        //           p.save(QString("screenshot%1.png").arg(count));
+        scTime = new QGraphicsScene;
+        scTime->addPixmap(p2);
+        ui->gvTime->setScene(scTime);
+        ui->gvTime->show();
 
-            QPixmap p3 = widget->grab(QRect(enterPos-QPoint(20,10)+QPoint(0,40),enterPos+QPoint(20,10)+QPoint(0,40)));
-            //           p.save(QString("screenshot%1.png").arg(count));
-            scMouse = new QGraphicsScene;
-            scMouse->addPixmap(p3);
-            ui->gvMouse->setScene(scMouse);
-            ui->gvMouse->show();
+        QPixmap p3 = widget->grab(QRect(enterPos-QPoint(20,10)+QPoint(0,40),enterPos+QPoint(20,10)+QPoint(0,40)));
+        //           p.save(QString("screenshot%1.png").arg(count));
+        scMouse = new QGraphicsScene;
+        scMouse->addPixmap(p3);
+        ui->gvMouse->setScene(scMouse);
+        ui->gvMouse->show();
 //           count++;
-       }
+   }
 }
 
 void MainWindow::updatePrice()

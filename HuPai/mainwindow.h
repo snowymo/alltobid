@@ -32,6 +32,12 @@ private:
 
 public slots:
     void updatePrice();
+    void updatePriceMouseX(int);
+    void updatePriceMouseY(int);
+    void updateTimeMouseX(int);
+    void updateTimeMouseY(int);
+    void updateEnterMouseX(int);
+    void updateEnterMouseY(int);
 
 private:
     Ui::MainWindow *ui;

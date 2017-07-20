@@ -68,13 +68,22 @@ public:
     QTextBrowser *textBrowser_4;
     QTextBrowser *currentPrice;
     QGraphicsView *gvPrice;
+    QSpinBox *sbPriceMouseX;
+    QSpinBox *sbPriceMouseY;
+    QTextBrowser *textBrowser_7;
     QWidget *timePanel;
     QTextBrowser *textBrowser_5;
     QTextBrowser *currentTime;
     QGraphicsView *gvTime;
+    QTextBrowser *textBrowser_8;
+    QSpinBox *sbTimeMouseY;
+    QSpinBox *sbTimeMouseX;
     QWidget *mousePanel;
     QTextBrowser *textBrowser_6;
     QGraphicsView *gvMouse;
+    QSpinBox *sbEnterMouseY;
+    QSpinBox *sbEnterMouseX;
+    QTextBrowser *textBrowser_9;
     QWidget *widget;
     QVBoxLayout *verticalLayout_3;
     QVBoxLayout *addressBar;
@@ -344,7 +353,7 @@ public:
         textBrowser_4->setFrameShape(QFrame::NoFrame);
         currentPrice = new QTextBrowser(pricePanel);
         currentPrice->setObjectName(QStringLiteral("currentPrice"));
-        currentPrice->setGeometry(QRect(0, 40, 485, 35));
+        currentPrice->setGeometry(QRect(10, 70, 460, 35));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Ignored);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -354,8 +363,28 @@ public:
         currentPrice->setFrameShape(QFrame::NoFrame);
         gvPrice = new QGraphicsView(pricePanel);
         gvPrice->setObjectName(QStringLiteral("gvPrice"));
-        gvPrice->setGeometry(QRect(10, 100, 461, 60));
+        gvPrice->setGeometry(QRect(10, 119, 460, 60));
         gvPrice->setSceneRect(QRectF(0, 0, 70, 20));
+        sbPriceMouseX = new QSpinBox(pricePanel);
+        sbPriceMouseX->setObjectName(QStringLiteral("sbPriceMouseX"));
+        sbPriceMouseX->setGeometry(QRect(120, 50, 42, 22));
+        sbPriceMouseX->setMaximum(1000);
+        sbPriceMouseX->setValue(156);
+        sbPriceMouseY = new QSpinBox(pricePanel);
+        sbPriceMouseY->setObjectName(QStringLiteral("sbPriceMouseY"));
+        sbPriceMouseY->setGeometry(QRect(180, 50, 42, 22));
+        sbPriceMouseY->setMaximum(1000);
+        sbPriceMouseY->setValue(408);
+        textBrowser_7 = new QTextBrowser(pricePanel);
+        textBrowser_7->setObjectName(QStringLiteral("textBrowser_7"));
+        textBrowser_7->setGeometry(QRect(10, 50, 241, 35));
+        textBrowser_7->setFrameShape(QFrame::NoFrame);
+        textBrowser_7->raise();
+        textBrowser_4->raise();
+        currentPrice->raise();
+        gvPrice->raise();
+        sbPriceMouseX->raise();
+        sbPriceMouseY->raise();
 
         verticalLayout->addWidget(pricePanel);
 
@@ -374,12 +403,26 @@ public:
         textBrowser_5->setFrameShape(QFrame::NoFrame);
         currentTime = new QTextBrowser(timePanel);
         currentTime->setObjectName(QStringLiteral("currentTime"));
-        currentTime->setGeometry(QRect(0, 40, 485, 35));
+        currentTime->setGeometry(QRect(0, 70, 485, 35));
         currentTime->setFont(font1);
         currentTime->setFrameShape(QFrame::NoFrame);
         gvTime = new QGraphicsView(timePanel);
         gvTime->setObjectName(QStringLiteral("gvTime"));
-        gvTime->setGeometry(QRect(10, 100, 461, 61));
+        gvTime->setGeometry(QRect(10, 110, 460, 60));
+        textBrowser_8 = new QTextBrowser(timePanel);
+        textBrowser_8->setObjectName(QStringLiteral("textBrowser_8"));
+        textBrowser_8->setGeometry(QRect(10, 50, 241, 35));
+        textBrowser_8->setFrameShape(QFrame::NoFrame);
+        sbTimeMouseY = new QSpinBox(timePanel);
+        sbTimeMouseY->setObjectName(QStringLiteral("sbTimeMouseY"));
+        sbTimeMouseY->setGeometry(QRect(180, 50, 42, 22));
+        sbTimeMouseY->setMaximum(1000);
+        sbTimeMouseY->setValue(394);
+        sbTimeMouseX = new QSpinBox(timePanel);
+        sbTimeMouseX->setObjectName(QStringLiteral("sbTimeMouseX"));
+        sbTimeMouseX->setGeometry(QRect(120, 50, 42, 22));
+        sbTimeMouseX->setMaximum(1000);
+        sbTimeMouseX->setValue(128);
 
         verticalLayout->addWidget(timePanel);
 
@@ -394,7 +437,26 @@ public:
         textBrowser_6->setFrameShape(QFrame::NoFrame);
         gvMouse = new QGraphicsView(mousePanel);
         gvMouse->setObjectName(QStringLiteral("gvMouse"));
-        gvMouse->setGeometry(QRect(20, 81, 451, 91));
+        gvMouse->setGeometry(QRect(20, 100, 460, 60));
+        sbEnterMouseY = new QSpinBox(mousePanel);
+        sbEnterMouseY->setObjectName(QStringLiteral("sbEnterMouseY"));
+        sbEnterMouseY->setGeometry(QRect(190, 50, 42, 22));
+        sbEnterMouseY->setMaximum(1000);
+        sbEnterMouseY->setValue(501);
+        sbEnterMouseX = new QSpinBox(mousePanel);
+        sbEnterMouseX->setObjectName(QStringLiteral("sbEnterMouseX"));
+        sbEnterMouseX->setGeometry(QRect(130, 50, 42, 22));
+        sbEnterMouseX->setMaximum(1000);
+        sbEnterMouseX->setValue(555);
+        textBrowser_9 = new QTextBrowser(mousePanel);
+        textBrowser_9->setObjectName(QStringLiteral("textBrowser_9"));
+        textBrowser_9->setGeometry(QRect(20, 50, 241, 35));
+        textBrowser_9->setFrameShape(QFrame::NoFrame);
+        textBrowser_9->raise();
+        textBrowser_6->raise();
+        gvMouse->raise();
+        sbEnterMouseY->raise();
+        sbEnterMouseX->raise();
 
         verticalLayout->addWidget(mousePanel);
 
@@ -466,16 +528,31 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'\345\276\256\350\275\257\351\233\205\351\273\221'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;\">\345\275\223\345\211\215\346\210\220\344\272\244\344\273\267</span></p></body></html>", 0));
+        textBrowser_7->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\346\240\207\345\256\232\345\267\246\344\270\212\350\247\222(x,y)=(            ,             )</span></p></body></html>", 0));
         textBrowser_5->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'\345\276\256\350\275\257\351\233\205\351\273\221'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-weight:600;\">\345\275\223\345\211\215\346\227\266\351\227\264</span></p></body></html>", 0));
+        textBrowser_8->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\346\240\207\345\256\232\345\267\246\344\270\212\350\247\222(x,y)=(            ,             )</span></p></body></html>", 0));
         textBrowser_6->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">\346\240\207\345\256\232\351\274\240\346\240\207</span></p></body></html>", 0));
+        textBrowser_9->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">\346\240\207\345\256\232\345\267\246\344\270\212\350\247\222(x,y)=(            ,             )</span></p></body></html>", 0));
     } // retranslateUi
 
 };

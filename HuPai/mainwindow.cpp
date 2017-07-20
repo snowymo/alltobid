@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer, SIGNAL(timeout()), this, SLOT(updatePrice()));
     timer->start(5000);
 
-    // load debug screenshot window
+    // load screenshot window
     scPrice = new QGraphicsScene(this);
     scTime = new QGraphicsScene(this);
     scMouse = new QGraphicsScene(this);
@@ -47,15 +47,25 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->gvMouse->show();
 
     // assign default mouse positions
-    pricePos[0] = QPoint(156,408);
+    pricePos[0] = QPoint(ui->sbPriceMouseX->value(), ui->sbPriceMouseY->value());// QPoint(156,408);
+    // delta 42, 15
     pricePos[1] = QPoint(198,423/*600*/);
+    pricePos[1] = QPoint(42, 15);
     //priceSize = QSize(42,-15);
 
-    timePos[0] = QPoint(128,394);
+    timePos[0] = QPoint(ui->sbTimeMouseX->value(), ui->sbTimeMouseY->value());//QPoint(128,394);
     timePos[1] = QPoint(195,406/*600*/);
+    timePos[1] = QPoint(67, 12);
 //    timeSize = QSize(67,-20);
 
-    enterPos = QPoint(555,501);
+    enterPos = QPoint(ui->sbEnterMouseX->value(), ui->sbEnterMouseY->value());//QPoint(555,501);
+
+    connect(ui->sbPriceMouseX, SIGNAL(valueChanged(int)),this, SLOT(updatePriceMouseX(int)));
+    connect(ui->sbPriceMouseY, SIGNAL(valueChanged(int)),this, SLOT(updatePriceMouseY(int)));
+    connect(ui->sbTimeMouseX, SIGNAL(valueChanged(int)),this, SLOT(updateTimeMouseX(int)));
+    connect(ui->sbTimeMouseY, SIGNAL(valueChanged(int)),this, SLOT(updateTimeMouseY(int)));
+    connect(ui->sbEnterMouseX, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseX(int)));
+    connect(ui->sbEnterMouseY, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseY(int)));
 }
 
 MainWindow::~MainWindow()
@@ -83,14 +93,14 @@ void MainWindow::grabApplication()
     QWidget *widget = QApplication::activeWindow();
        if(widget) {
             //           static int count = 0;
-            QPixmap p1 = widget->grab(QRect(pricePos[0]+QPoint(-0,40),pricePos[1]+QPoint(-0,40)));
+            QPixmap p1 = widget->grab(QRect(pricePos[0]+QPoint(-0,40),pricePos[0] + pricePos[1] + +QPoint(-0,40)));
             //           p.save(QString("screenshot%1.png").arg(count));
             scPrice = new QGraphicsScene;
             scPrice->addPixmap(p1);
             ui->gvPrice->setScene(scPrice);
             ui->gvPrice->show();
 
-            QPixmap p2 = widget->grab(QRect(timePos[0]+QPoint(0,40),timePos[1]+QPoint(0,40)));
+            QPixmap p2 = widget->grab(QRect(timePos[0]+QPoint(0,40),timePos[0] + timePos[1]+QPoint(0,40)));
             //           p.save(QString("screenshot%1.png").arg(count));
             scTime = new QGraphicsScene;
             scTime->addPixmap(p2);
@@ -111,6 +121,37 @@ void MainWindow::updatePrice()
 {
     grabApplication();
     timer->start(100);
+}
+
+void MainWindow::updatePriceMouseX(int x)
+{
+    // assign default mouse positions
+    pricePos[0].setX(x);
+}
+
+void MainWindow::updatePriceMouseY(int y)
+{
+    pricePos[0].setY(y);
+}
+
+void MainWindow::updateTimeMouseX(int x)
+{
+    timePos[0].setX(x);
+}
+
+void MainWindow::updateTimeMouseY(int y)
+{
+    timePos[0].setY(y);
+}
+
+void MainWindow::updateEnterMouseX(int x)
+{
+    enterPos.setX(x);
+}
+
+void MainWindow::updateEnterMouseY(int y)
+{
+    enterPos.setY(y);
 }
 
 bool MainWindow::eventFilter(QObject *obj, QEvent *event)

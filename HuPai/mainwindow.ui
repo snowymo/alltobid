@@ -709,9 +709,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QTextBrowser" name="currentPrice">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>40</y>
-           <width>485</width>
+           <x>10</x>
+           <y>70</y>
+           <width>460</width>
            <height>35</height>
           </rect>
          </property>
@@ -735,8 +735,8 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>100</y>
-           <width>461</width>
+           <y>119</y>
+           <width>460</width>
            <height>60</height>
           </rect>
          </property>
@@ -749,6 +749,64 @@ p, li { white-space: pre-wrap; }
           </rectf>
          </property>
         </widget>
+        <widget class="QSpinBox" name="sbPriceMouseX">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>50</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>156</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="sbPriceMouseY">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>50</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>408</number>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="textBrowser_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>241</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;标定左上角(x,y)=(            ,             )&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <zorder>textBrowser_7</zorder>
+        <zorder>textBrowser_4</zorder>
+        <zorder>currentPrice</zorder>
+        <zorder>gvPrice</zorder>
+        <zorder>sbPriceMouseX</zorder>
+        <zorder>sbPriceMouseY</zorder>
        </widget>
       </item>
       <item>
@@ -795,7 +853,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>40</y>
+           <y>70</y>
            <width>485</width>
            <height>35</height>
           </rect>
@@ -814,10 +872,62 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>100</y>
-           <width>461</width>
-           <height>61</height>
+           <y>110</y>
+           <width>460</width>
+           <height>60</height>
           </rect>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="textBrowser_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>241</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;标定左上角(x,y)=(            ,             )&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="sbTimeMouseY">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>50</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>394</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="sbTimeMouseX">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>50</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>128</number>
          </property>
         </widget>
        </widget>
@@ -853,12 +963,69 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>81</y>
-           <width>451</width>
-           <height>91</height>
+           <y>100</y>
+           <width>460</width>
+           <height>60</height>
           </rect>
          </property>
         </widget>
+        <widget class="QSpinBox" name="sbEnterMouseY">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>50</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>501</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="sbEnterMouseX">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>50</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>555</number>
+         </property>
+        </widget>
+        <widget class="QTextBrowser" name="textBrowser_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>241</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;标定左上角(x,y)=(            ,             )&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <zorder>textBrowser_9</zorder>
+        <zorder>textBrowser_6</zorder>
+        <zorder>gvMouse</zorder>
+        <zorder>sbEnterMouseY</zorder>
+        <zorder>sbEnterMouseX</zorder>
        </widget>
       </item>
      </layout>

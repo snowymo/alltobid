@@ -56,11 +56,7 @@ void DigitRecognition::detectDigit()
             && (bb.height > 2)
             ) {
             // update height for each contour
-            if (bb.height < eachHeight * 0.8) {
-                bb.height = eachHeight;
-                bb.y = eachY;
-            }
-            else if (eachHeight < bb.height) {
+            if (eachHeight < bb.height) {
                 if(eachY > bb.y)
                     eachY = bb.y;
                 eachHeight = bb.height;
@@ -84,7 +80,7 @@ void DigitRecognition::detectDigit()
             }
 
             cv::Mat seperateDigit = digitAOIGray(bb);
-            cv::imshow("sep-" + QString::number(i).toStdString(), seperateDigit);
+//            cv::imshow("sep-" + QString::number(i).toStdString(), seperateDigit);
             cv::imwrite("sep-" + QString::number(i).toStdString() + ".jpg", seperateDigit);
             //imwrite("sep-" + std::to_string(i)+".jpg", seperateDigit);
             // detect the number based on seperateDigit
@@ -117,11 +113,11 @@ void DigitRecognition::initialDigit()
     }
 
     std::vector<int> child0;
-    child0.push_back(1); child0.push_back(2); child0.push_back(3); child0.push_back(4); child0.push_back(5); child0.push_back(7);
+    child0.push_back(1); child0.push_back(2); child0.push_back(3);  child0.push_back(5); child0.push_back(7);
     childIdx.push_back(child0);
 
     std::vector<int> child1;
-    child1.push_back(0); child1.push_back(6); child1.push_back(9);
+    child1.push_back(0); child1.push_back(4); child1.push_back(6); child1.push_back(9);
     childIdx.push_back(child1);
 
     std::vector<int> child2;

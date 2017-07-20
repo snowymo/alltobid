@@ -68,6 +68,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->sbEnterMouseY, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseY(int)));
 
     pRecog = new DigitRecognition;
+
+
 }
 
 MainWindow::~MainWindow()
@@ -105,6 +107,8 @@ void MainWindow::grabApplication()
         pRecog->setSource(p1.toImage());
         pRecog->detectDigit();
         ui->currentPrice->setText(QString::number(pRecog->getResult()));
+        ui->currentPrice->setAlignment(Qt::AlignCenter);
+
 
         QPixmap p2 = widget->grab(QRect(timePos[0]+QPoint(0,40),timePos[0] + timePos[1]+QPoint(0,40)));
         //           p.save(QString("screenshot%1.png").arg(count));
@@ -112,6 +116,7 @@ void MainWindow::grabApplication()
         scTime->addPixmap(p2);
         ui->gvTime->setScene(scTime);
         ui->gvTime->show();
+        ui->currentTime->setAlignment(Qt::AlignCenter);
 
         QPixmap p3 = widget->grab(QRect(enterPos-QPoint(20,10)+QPoint(0,40),enterPos+QPoint(20,10)+QPoint(0,40)));
         //           p.save(QString("screenshot%1.png").arg(count));

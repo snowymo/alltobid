@@ -353,13 +353,17 @@ public:
         textBrowser_4->setFrameShape(QFrame::NoFrame);
         currentPrice = new QTextBrowser(pricePanel);
         currentPrice->setObjectName(QStringLiteral("currentPrice"));
-        currentPrice->setGeometry(QRect(10, 70, 460, 35));
+        currentPrice->setGeometry(QRect(10, 84, 460, 31));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Ignored);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(currentPrice->sizePolicy().hasHeightForWidth());
         currentPrice->setSizePolicy(sizePolicy2);
         currentPrice->setMaximumSize(QSize(16777215, 35));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font1.setPointSize(12);
+        currentPrice->setFont(font1);
         currentPrice->setFrameShape(QFrame::NoFrame);
         gvPrice = new QGraphicsView(pricePanel);
         gvPrice->setObjectName(QStringLiteral("gvPrice"));
@@ -396,19 +400,19 @@ public:
         sizePolicy2.setHeightForWidth(textBrowser_5->sizePolicy().hasHeightForWidth());
         textBrowser_5->setSizePolicy(sizePolicy2);
         textBrowser_5->setMaximumSize(QSize(16777215, 35));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font1.setPointSize(14);
-        textBrowser_5->setFont(font1);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font2.setPointSize(14);
+        textBrowser_5->setFont(font2);
         textBrowser_5->setFrameShape(QFrame::NoFrame);
         currentTime = new QTextBrowser(timePanel);
         currentTime->setObjectName(QStringLiteral("currentTime"));
-        currentTime->setGeometry(QRect(0, 70, 485, 35));
+        currentTime->setGeometry(QRect(0, 84, 485, 31));
         currentTime->setFont(font1);
         currentTime->setFrameShape(QFrame::NoFrame);
         gvTime = new QGraphicsView(timePanel);
         gvTime->setObjectName(QStringLiteral("gvTime"));
-        gvTime->setGeometry(QRect(10, 110, 460, 60));
+        gvTime->setGeometry(QRect(10, 120, 460, 60));
         textBrowser_8 = new QTextBrowser(timePanel);
         textBrowser_8->setObjectName(QStringLiteral("textBrowser_8"));
         textBrowser_8->setGeometry(QRect(10, 50, 241, 35));
@@ -431,9 +435,9 @@ public:
         textBrowser_6 = new QTextBrowser(mousePanel);
         textBrowser_6->setObjectName(QStringLiteral("textBrowser_6"));
         textBrowser_6->setGeometry(QRect(0, 0, 485, 35));
-        QFont font2;
-        font2.setPointSize(14);
-        textBrowser_6->setFont(font2);
+        QFont font3;
+        font3.setPointSize(14);
+        textBrowser_6->setFont(font3);
         textBrowser_6->setFrameShape(QFrame::NoFrame);
         gvMouse = new QGraphicsView(mousePanel);
         gvMouse->setObjectName(QStringLiteral("gvMouse"));
@@ -528,6 +532,11 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'\345\276\256\350\275\257\351\233\205\351\273\221'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;\">\345\275\223\345\211\215\346\210\220\344\272\244\344\273\267</span></p></body></html>", 0));
+        currentPrice->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'\345\276\256\350\275\257\351\233\205\351\273\221'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;\"><br /></p></body></html>", 0));
         textBrowser_7->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -538,6 +547,11 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'\345\276\256\350\275\257\351\233\205\351\273\221'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-weight:600;\">\345\275\223\345\211\215\346\227\266\351\227\264</span></p></body></html>", 0));
+        currentTime->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'\345\276\256\350\275\257\351\233\205\351\273\221'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;\"><br /></p></body></html>", 0));
         textBrowser_8->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

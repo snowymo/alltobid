@@ -15,7 +15,7 @@ DigitRecognition::~DigitRecognition()
 
 void DigitRecognition::setSource(QImage img)
 {
-    img.save("beforeconvert.jpg");
+    //img.save("beforeconvert.jpg");
     img = img.convertToFormat(QImage::Format_RGB888).rgbSwapped();
 //    img.save("afterconvert.jpg");
 //    img = img.rgbSwapped();

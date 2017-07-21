@@ -407,7 +407,7 @@ public:
         textBrowser_5->setFrameShape(QFrame::NoFrame);
         currentTime = new QTextBrowser(timePanel);
         currentTime->setObjectName(QStringLiteral("currentTime"));
-        currentTime->setGeometry(QRect(0, 84, 485, 31));
+        currentTime->setGeometry(QRect(0, 80, 485, 41));
         currentTime->setFont(font1);
         currentTime->setFrameShape(QFrame::NoFrame);
         gvTime = new QGraphicsView(timePanel);
@@ -415,16 +415,16 @@ public:
         gvTime->setGeometry(QRect(10, 120, 460, 60));
         textBrowser_8 = new QTextBrowser(timePanel);
         textBrowser_8->setObjectName(QStringLiteral("textBrowser_8"));
-        textBrowser_8->setGeometry(QRect(10, 50, 241, 35));
+        textBrowser_8->setGeometry(QRect(10, 40, 241, 35));
         textBrowser_8->setFrameShape(QFrame::NoFrame);
         sbTimeMouseY = new QSpinBox(timePanel);
         sbTimeMouseY->setObjectName(QStringLiteral("sbTimeMouseY"));
-        sbTimeMouseY->setGeometry(QRect(180, 50, 42, 22));
+        sbTimeMouseY->setGeometry(QRect(180, 40, 42, 22));
         sbTimeMouseY->setMaximum(1000);
         sbTimeMouseY->setValue(394);
         sbTimeMouseX = new QSpinBox(timePanel);
         sbTimeMouseX->setObjectName(QStringLiteral("sbTimeMouseX"));
-        sbTimeMouseX->setGeometry(QRect(120, 50, 42, 22));
+        sbTimeMouseX->setGeometry(QRect(120, 40, 42, 22));
         sbTimeMouseX->setMaximum(1000);
         sbTimeMouseX->setValue(128);
 

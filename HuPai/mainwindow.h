@@ -9,6 +9,8 @@
 #include "addressbar.h"
 
 #include "digitrecognition.h"
+#include "pricerecognition.h"
+#include "timerecognition.h"
 
 class QWebView;
 QT_BEGIN_NAMESPACE
@@ -56,7 +58,9 @@ private:
     QPoint timePos[2];
     QPoint enterPos;
 
-    DigitRecognition* pRecog;
+//    DigitRecognition* pRecog;
+    PriceRecognition* pPriceRecog;
+    TimeRecognition* pTimeRecog;
 };
 
 #endif // MAINWINDOW_H

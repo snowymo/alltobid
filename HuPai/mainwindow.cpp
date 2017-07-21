@@ -67,14 +67,20 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->sbEnterMouseX, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseX(int)));
     connect(ui->sbEnterMouseY, SIGNAL(valueChanged(int)),this, SLOT(updateEnterMouseY(int)));
 
-    pRecog = new DigitRecognition;
-
-
+//    pRecog = new DigitRecognition;
+    pPriceRecog = new PriceRecognition;
+    pTimeRecog = new TimeRecognition;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+
+    delete pPriceRecog;
+    pPriceRecog = 0;
+
+    delete pTimeRecog;
+    pTimeRecog = 0;
 }
 
 //void MainWindow::setImage(QImage img)
@@ -104,9 +110,9 @@ void MainWindow::grabApplication()
         ui->gvPrice->setScene(scPrice);
         ui->gvPrice->show();
         //
-        pRecog->setSource(p1.toImage());
-        pRecog->detectDigit();
-        ui->currentPrice->setText(QString::number(pRecog->getResult()));
+        pPriceRecog->setSource(p1.toImage());
+        pPriceRecog->recognize();
+        ui->currentPrice->setText(QString::number(pPriceRecog->getResult()));
         ui->currentPrice->setAlignment(Qt::AlignCenter);
 
 
@@ -116,6 +122,11 @@ void MainWindow::grabApplication()
         scTime->addPixmap(p2);
         ui->gvTime->setScene(scTime);
         ui->gvTime->show();
+        pTimeRecog->setSource(p2.toImage());
+        pTimeRecog->recognize();
+//        int* retTime = pTimeRecog->getRetTime();
+//        QString stime = QString::number(retTime[0]) + ":" + QString::number(retTime[1]) + ":" + QString::number(retTime[2]);
+        ui->currentTime->setText(/*stime + "\n" + */pTimeRecog->getTime().toString());
         ui->currentTime->setAlignment(Qt::AlignCenter);
 
         QPixmap p3 = widget->grab(QRect(enterPos-QPoint(20,10)+QPoint(0,40),enterPos+QPoint(20,10)+QPoint(0,40)));

@@ -8,6 +8,11 @@ DigitRecognition::DigitRecognition()
     initialDigit();
 }
 
+DigitRecognition::~DigitRecognition()
+{
+
+}
+
 void DigitRecognition::setSource(QImage img)
 {
     img.save("beforeconvert.jpg");
@@ -23,7 +28,7 @@ void DigitRecognition::setSource(QImage img)
 //    imwrite("convert2CV.jpg",src);
 }
 
-void DigitRecognition::detectDigit()
+std::map<int, int> DigitRecognition::detectDigit()
 {
     std::map<int, int> digit;
 
@@ -95,8 +100,9 @@ void DigitRecognition::detectDigit()
             //break;
         //}
     }
+    return digit;
     // return exact results
-    translate2num(digit);
+//    translate2num(digit);
     //test
 }
 
@@ -125,18 +131,7 @@ void DigitRecognition::initialDigit()
     childIdx.push_back(child2);
 }
 
-void DigitRecognition::translate2num(std::map<int, int> digit)
-{
-    result = 0;
-    std::map<int, int>::iterator it = digit.begin();
-    int i = 1;
-//        std::cout << "real result\n";
-    for (; it != digit.end(); it++, i++) {
-        //std::cout << it->second;
-        result += it->second * pow(10, digit.size()-i);
-    }
-    //        std::cout << "\n";
-}
+
 
 int DigitRecognition::cmp2source(cv::Mat input, int child)
 {

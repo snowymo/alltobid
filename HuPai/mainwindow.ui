@@ -158,7 +158,7 @@ p, li { white-space: pre-wrap; }
               <number>29</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety1_sec">
+            <widget class="QSpinBox" name="strategy1_sec">
              <property name="geometry">
               <rect>
                <x>80</x>
@@ -177,7 +177,7 @@ p, li { white-space: pre-wrap; }
               <number>30</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety1_add">
+            <widget class="QSpinBox" name="strategy1_add">
              <property name="geometry">
               <rect>
                <x>130</x>
@@ -199,10 +199,10 @@ p, li { white-space: pre-wrap; }
               <number>100</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety1_presec">
+            <widget class="QSpinBox" name="strategy1_presec">
              <property name="geometry">
               <rect>
-               <x>240</x>
+               <x>230</x>
                <y>0</y>
                <width>41</width>
                <height>22</height>
@@ -218,10 +218,10 @@ p, li { white-space: pre-wrap; }
               <number>5</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety1_preprice">
+            <widget class="QSpinBox" name="strategy1_preprice">
              <property name="geometry">
               <rect>
-               <x>310</x>
+               <x>304</x>
                <y>0</y>
                <width>51</width>
                <height>22</height>
@@ -266,15 +266,15 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +                 元 提前            秒或             元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +               元 提前            秒或              元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
             <widget class="QTextBrowser" name="strategy1_value">
              <property name="geometry">
               <rect>
-               <x>450</x>
+               <x>443</x>
                <y>0</y>
-               <width>51</width>
+               <width>40</width>
                <height>21</height>
               </rect>
              </property>
@@ -288,10 +288,10 @@ p, li { white-space: pre-wrap; }
             <zorder>textBrowser</zorder>
             <zorder>strategy1_hour</zorder>
             <zorder>strategy1_min</zorder>
-            <zorder>stragety1_sec</zorder>
-            <zorder>stragety1_add</zorder>
-            <zorder>stragety1_presec</zorder>
-            <zorder>stragety1_preprice</zorder>
+            <zorder>strategy1_sec</zorder>
+            <zorder>strategy1_add</zorder>
+            <zorder>strategy1_presec</zorder>
+            <zorder>strategy1_preprice</zorder>
             <zorder>strategy1_value</zorder>
            </widget>
           </item>
@@ -322,7 +322,7 @@ p, li { white-space: pre-wrap; }
               <number>11</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety2_min">
+            <widget class="QSpinBox" name="strategy2_min">
              <property name="geometry">
               <rect>
                <x>40</x>
@@ -341,7 +341,7 @@ p, li { white-space: pre-wrap; }
               <number>29</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety2_sec">
+            <widget class="QSpinBox" name="strategy2_sec">
              <property name="geometry">
               <rect>
                <x>80</x>
@@ -360,7 +360,7 @@ p, li { white-space: pre-wrap; }
               <number>30</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety2_add">
+            <widget class="QSpinBox" name="strategy2_add">
              <property name="geometry">
               <rect>
                <x>130</x>
@@ -382,10 +382,10 @@ p, li { white-space: pre-wrap; }
               <number>100</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety2_presec">
+            <widget class="QSpinBox" name="strategy2_presec">
              <property name="geometry">
               <rect>
-               <x>240</x>
+               <x>230</x>
                <y>0</y>
                <width>41</width>
                <height>22</height>
@@ -401,10 +401,10 @@ p, li { white-space: pre-wrap; }
               <number>5</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety2_preprice">
+            <widget class="QSpinBox" name="strategy2_preprice">
              <property name="geometry">
               <rect>
-               <x>310</x>
+               <x>304</x>
                <y>0</y>
                <width>51</width>
                <height>22</height>
@@ -449,15 +449,15 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +                 元 提前            秒或             元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +               元 提前            秒或              元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
             <widget class="QTextBrowser" name="strategy2_value">
              <property name="geometry">
               <rect>
-               <x>450</x>
+               <x>443</x>
                <y>0</y>
-               <width>51</width>
+               <width>40</width>
                <height>21</height>
               </rect>
              </property>
@@ -470,11 +470,11 @@ p, li { white-space: pre-wrap; }
             </widget>
             <zorder>textBrowser_2</zorder>
             <zorder>strategy2_hour</zorder>
-            <zorder>stragety2_min</zorder>
-            <zorder>stragety2_sec</zorder>
-            <zorder>stragety2_add</zorder>
-            <zorder>stragety2_presec</zorder>
-            <zorder>stragety2_preprice</zorder>
+            <zorder>strategy2_min</zorder>
+            <zorder>strategy2_sec</zorder>
+            <zorder>strategy2_add</zorder>
+            <zorder>strategy2_presec</zorder>
+            <zorder>strategy2_preprice</zorder>
             <zorder>strategy2_value</zorder>
            </widget>
           </item>
@@ -505,7 +505,7 @@ p, li { white-space: pre-wrap; }
               <number>11</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety3_min">
+            <widget class="QSpinBox" name="strategy3_min">
              <property name="geometry">
               <rect>
                <x>40</x>
@@ -524,7 +524,7 @@ p, li { white-space: pre-wrap; }
               <number>29</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety3_sec">
+            <widget class="QSpinBox" name="strategy3_sec">
              <property name="geometry">
               <rect>
                <x>80</x>
@@ -543,7 +543,7 @@ p, li { white-space: pre-wrap; }
               <number>30</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety3_add">
+            <widget class="QSpinBox" name="strategy3_add">
              <property name="geometry">
               <rect>
                <x>130</x>
@@ -565,10 +565,10 @@ p, li { white-space: pre-wrap; }
               <number>100</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety3_presec">
+            <widget class="QSpinBox" name="strategy3_presec">
              <property name="geometry">
               <rect>
-               <x>240</x>
+               <x>230</x>
                <y>0</y>
                <width>41</width>
                <height>22</height>
@@ -584,10 +584,10 @@ p, li { white-space: pre-wrap; }
               <number>5</number>
              </property>
             </widget>
-            <widget class="QSpinBox" name="stragety3_preprice">
+            <widget class="QSpinBox" name="strategy3_preprice">
              <property name="geometry">
               <rect>
-               <x>310</x>
+               <x>304</x>
                <y>0</y>
                <width>51</width>
                <height>22</height>
@@ -632,15 +632,15 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +                 元 提前            秒或             元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;       ：        ：          +               元 提前            秒或              元 该策略出价&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
             <widget class="QTextBrowser" name="strategy3_value">
              <property name="geometry">
               <rect>
-               <x>450</x>
+               <x>443</x>
                <y>0</y>
-               <width>51</width>
+               <width>40</width>
                <height>21</height>
               </rect>
              </property>
@@ -653,18 +653,16 @@ p, li { white-space: pre-wrap; }
             </widget>
             <zorder>textBrowser_3</zorder>
             <zorder>strategy3_hour</zorder>
-            <zorder>stragety3_min</zorder>
-            <zorder>stragety3_sec</zorder>
-            <zorder>stragety3_add</zorder>
-            <zorder>stragety3_presec</zorder>
-            <zorder>stragety3_preprice</zorder>
+            <zorder>strategy3_min</zorder>
+            <zorder>strategy3_sec</zorder>
+            <zorder>strategy3_add</zorder>
+            <zorder>strategy3_presec</zorder>
+            <zorder>strategy3_preprice</zorder>
             <zorder>strategy3_value</zorder>
            </widget>
           </item>
          </layout>
         </widget>
-        <zorder>verticalLayoutWidget_2</zorder>
-        <zorder>pricePanel</zorder>
        </widget>
       </item>
       <item>
@@ -775,7 +773,7 @@ p, li { white-space: pre-wrap; }
           <number>1000</number>
          </property>
          <property name="value">
-          <number>156</number>
+          <number>282</number>
          </property>
         </widget>
         <widget class="QSpinBox" name="sbPriceMouseY">
@@ -791,7 +789,7 @@ p, li { white-space: pre-wrap; }
           <number>1000</number>
          </property>
          <property name="value">
-          <number>408</number>
+          <number>438</number>
          </property>
         </widget>
         <widget class="QTextBrowser" name="textBrowser_7">
@@ -1050,7 +1048,7 @@ p, li { white-space: pre-wrap; }
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>1</x>

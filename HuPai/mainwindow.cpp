@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // assign default mouse positions
     pricePos[0] = QPoint(ui->sbPriceMouseX->value(), ui->sbPriceMouseY->value());// QPoint(156,408);
     // delta 42, 15
-    pricePos[1] = QPoint(198,423/*600*/);
+    pricePos[1] = QPoint(282,438/*198,423*//*600*/);
     pricePos[1] = QPoint(42, 15);
     //priceSize = QSize(42,-15);
 
@@ -70,6 +70,29 @@ MainWindow::MainWindow(QWidget *parent) :
 //    pRecog = new DigitRecognition;
     pPriceRecog = new PriceRecognition;
     pTimeRecog = new TimeRecognition;
+
+    strategies = new Strategy[3];
+
+    connect(ui->strategy1_add, SIGNAL(valueChanged(int)),this, SLOT(updateStg1AP(int)));
+    connect(ui->strategy1_hour, SIGNAL(valueChanged(int)),this, SLOT(updateStg1Hour(int)));
+    connect(ui->strategy1_min, SIGNAL(valueChanged(int)),this, SLOT(updateStg1Min(int)));
+    connect(ui->strategy1_preprice, SIGNAL(valueChanged(int)),this, SLOT(updateStg1PP(int)));
+    connect(ui->strategy1_presec, SIGNAL(valueChanged(int)),this, SLOT(updateStg1PT(int)));
+    connect(ui->strategy1_sec, SIGNAL(valueChanged(int)),this, SLOT(updateStg1Sec(int)));
+
+    connect(ui->strategy2_add, SIGNAL(valueChanged(int)),this, SLOT(updateStg2AP(int)));
+    connect(ui->strategy2_hour, SIGNAL(valueChanged(int)),this, SLOT(updateStg2Hour(int)));
+    connect(ui->strategy2_min, SIGNAL(valueChanged(int)),this, SLOT(updateStg2Min(int)));
+    connect(ui->strategy2_preprice, SIGNAL(valueChanged(int)),this, SLOT(updateStg2PP(int)));
+    connect(ui->strategy2_presec, SIGNAL(valueChanged(int)),this, SLOT(updateStg2PT(int)));
+    connect(ui->strategy2_sec, SIGNAL(valueChanged(int)),this, SLOT(updateStg1Sec(int)));
+
+    connect(ui->strategy3_add, SIGNAL(valueChanged(int)),this, SLOT(updateStg3AP(int)));
+    connect(ui->strategy3_hour, SIGNAL(valueChanged(int)),this, SLOT(updateStg3Hour(int)));
+    connect(ui->strategy3_min, SIGNAL(valueChanged(int)),this, SLOT(updateStg3Min(int)));
+    connect(ui->strategy3_preprice, SIGNAL(valueChanged(int)),this, SLOT(updateStg3PP(int)));
+    connect(ui->strategy3_presec, SIGNAL(valueChanged(int)),this, SLOT(updateStg3PT(int)));
+    connect(ui->strategy3_sec, SIGNAL(valueChanged(int)),this, SLOT(updateStg3Sec(int)));
 }
 
 MainWindow::~MainWindow()
@@ -81,6 +104,8 @@ MainWindow::~MainWindow()
 
     delete pTimeRecog;
     pTimeRecog = 0;
+
+    delete [] strategies;
 }
 
 //void MainWindow::setImage(QImage img)
@@ -139,9 +164,28 @@ void MainWindow::grabApplication()
    }
 }
 
+void MainWindow::checkStrategies()
+{
+    // based on detail of strageties, update the value
+    for(int i = 0; i < 3; i++){
+        strategies[i].updateStrategy(pTimeRecog->getTime(),pPriceRecog->getResult());
+    }
+    ui->strategy1_value->setText(QString::number(strategies[0].getFinalPrice()));
+    ui->strategy2_value->setText(QString::number(strategies[1].getFinalPrice()));
+    ui->strategy3_value->setText(QString::number(strategies[2].getFinalPrice()));
+}
+
 void MainWindow::updatePrice()
 {
     grabApplication();
+    checkStrategies();
+    if(strategies[0].triggerMouse(pTimeRecog->getTime(),pPriceRecog->getResult())){
+        QMouseEvent* mEvnPress, *mEvnRelease;
+        mEvnPress = new QMouseEvent(QEvent::MouseButtonPress, enterPos,Qt::LeftButton,Qt::LeftButton,Qt::NoModifier);
+        QApplication::sendEvent(QWidget::focusWidget(), mEvnPress);
+        mEvnRelease = new QMouseEvent(QEvent::MouseButtonRelease, enterPos,Qt::LeftButton,Qt::LeftButton,Qt::NoModifier);
+        QApplication::sendEvent(QWidget::focusWidget(),mEvnRelease);
+    }
     timer->start(100);
 }
 
@@ -176,6 +220,116 @@ void MainWindow::updateEnterMouseY(int y)
     enterPos.setY(y);
 }
 
+void MainWindow::updateStg1Hour(int)
+{
+    strategies[0].setBTime(ui->strategy1_hour->value(),ui->strategy1_min->value(),ui->strategy1_sec->value());
+    strategies[0].resetLocked();
+}
+
+void MainWindow::updateStg1Min(int)
+{
+    strategies[0].setBTime(ui->strategy1_hour->value(),ui->strategy1_min->value(),ui->strategy1_sec->value());
+    strategies[0].resetLocked();
+}
+
+void MainWindow::updateStg1Sec(int)
+{
+    strategies[0].setBTime(ui->strategy1_hour->value(),ui->strategy1_min->value(),ui->strategy1_sec->value());
+    strategies[0].resetLocked();
+}
+
+void MainWindow::updateStg1AP(int ap)
+{
+    strategies[0].setAddPrice(ap);
+//    strategies[0].resetLocked();
+}
+
+void MainWindow::updateStg1PP(int pp)
+{
+    strategies[0].setPrePrice(pp);
+//    strategies[0].resetLocked();
+}
+
+void MainWindow::updateStg1PT(int pt)
+{
+    strategies[0].setPreTime(pt);
+//    strategies[0].resetLocked();
+}
+
+
+void MainWindow::updateStg2Hour(int)
+{
+    strategies[1].setBTime(ui->strategy2_hour->value(),ui->strategy2_min->value(),ui->strategy2_sec->value());
+    strategies[1].resetLocked();
+}
+
+void MainWindow::updateStg2Min(int)
+{
+    strategies[1].setBTime(ui->strategy2_hour->value(),ui->strategy2_min->value(),ui->strategy2_sec->value());
+    strategies[1].resetLocked();
+}
+
+void MainWindow::updateStg2Sec(int)
+{
+    strategies[1].setBTime(ui->strategy2_hour->value(),ui->strategy2_min->value(),ui->strategy2_sec->value());
+    strategies[1].resetLocked();
+}
+
+void MainWindow::updateStg2AP(int ap)
+{
+    strategies[1].setAddPrice(ap);
+//    strategies[1].resetLocked();
+}
+
+void MainWindow::updateStg2PP(int pp)
+{
+    strategies[1].setPrePrice(pp);
+//    strategies[1].resetLocked();
+}
+
+void MainWindow::updateStg2PT(int pt)
+{
+    strategies[1].setPreTime(pt);
+//    strategies[1].resetLocked();
+}
+
+
+
+void MainWindow::updateStg3Hour(int)
+{
+    strategies[2].setBTime(ui->strategy3_hour->value(),ui->strategy3_min->value(),ui->strategy3_sec->value());
+    strategies[2].resetLocked();
+}
+
+void MainWindow::updateStg3Min(int)
+{
+    strategies[2].setBTime(ui->strategy3_hour->value(),ui->strategy3_min->value(),ui->strategy3_sec->value());
+    strategies[2].resetLocked();
+}
+
+void MainWindow::updateStg3Sec(int)
+{
+    strategies[2].setBTime(ui->strategy3_hour->value(),ui->strategy3_min->value(),ui->strategy3_sec->value());
+    strategies[2].resetLocked();
+}
+
+void MainWindow::updateStg3AP(int ap)
+{
+    strategies[2].setAddPrice(ap);
+//    strategies[2].resetLocked();
+}
+
+void MainWindow::updateStg3PP(int pp)
+{
+    strategies[2].setPrePrice(pp);
+//    strategies[2].resetLocked();
+}
+
+void MainWindow::updateStg3PT(int pt)
+{
+    strategies[2].setPreTime(pt);
+//    strategies[2].resetLocked();
+}
 bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 {
   if (event->type() == QEvent::MouseMove)

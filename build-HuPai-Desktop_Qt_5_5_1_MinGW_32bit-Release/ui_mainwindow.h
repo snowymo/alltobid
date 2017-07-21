@@ -372,12 +372,12 @@ public:
         sbPriceMouseX->setObjectName(QStringLiteral("sbPriceMouseX"));
         sbPriceMouseX->setGeometry(QRect(120, 50, 42, 22));
         sbPriceMouseX->setMaximum(1000);
-        sbPriceMouseX->setValue(156);
+        sbPriceMouseX->setValue(282);
         sbPriceMouseY = new QSpinBox(pricePanel);
         sbPriceMouseY->setObjectName(QStringLiteral("sbPriceMouseY"));
         sbPriceMouseY->setGeometry(QRect(180, 50, 42, 22));
         sbPriceMouseY->setMaximum(1000);
-        sbPriceMouseY->setValue(408);
+        sbPriceMouseY->setValue(438);
         textBrowser_7 = new QTextBrowser(pricePanel);
         textBrowser_7->setObjectName(QStringLiteral("textBrowser_7"));
         textBrowser_7->setGeometry(QRect(10, 50, 241, 35));
